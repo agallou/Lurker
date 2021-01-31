@@ -12,9 +12,9 @@ class DirectoryResource extends BaseDirectoryResource implements ResourceInterfa
 
     public function exists()
     {
-        clearstatcache(true, $resource = $this->getResource());
+        clearstatcache(true, $this->getResource());
 
-        return is_dir($resource);
+        return is_dir($this->getResource());
     }
 
     public function getModificationTime()
